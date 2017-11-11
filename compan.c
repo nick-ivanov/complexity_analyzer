@@ -20,6 +20,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <math.h>
+
+#define FUNC01_TITLE = "n^(1/2)";
+long double func01(long double n) {
+	return powl(n, 0.5);
+}
 
 int main()
 {
