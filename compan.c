@@ -22,13 +22,22 @@
 #include <string.h>
 #include <math.h>
 
-#define FUNC01_TITLE = "n^(1/2)";
+#define TAB_WIDTH 20
+
+#define FUNC01_TITLE = "n*log(n)";
 long double func01(long double n) {
-	return powl(n, 0.5);
+	return n * logl (n);
+}
+
+#define FUNC02_TITLE = "n^2";
+long double func02(long double n) {
+	return n * n;
 }
 
 int main()
 {
 	printf("Welcome to Complexity Analyzer");
+
+
 	return EXIT_SUCCESS;
 }
