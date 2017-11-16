@@ -23,6 +23,8 @@
 #include <math.h>
 
 #define TAB_WIDTH 20
+#define NROWS 30
+#define STEP 1000
 
 #define FUNC01_TITLE "n*log(n)"
 long double func01(long double n) {
@@ -38,7 +40,9 @@ int main()
 {
 	printf("Welcome to Complexity Analyzer\n");
 
-	printf("%*s%*s\n", TAB_WIDTH, FUNC01_TITLE, TAB_WIDTH, FUNC02_TITLE);
+	printf("%*s%*s%*s\n", TAB_WIDTH, "N", TAB_WIDTH, FUNC01_TITLE, TAB_WIDTH, FUNC02_TITLE);
+
+	
 
 
 	return EXIT_SUCCESS;
