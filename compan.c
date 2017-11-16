@@ -24,19 +24,21 @@
 
 #define TAB_WIDTH 20
 
-#define FUNC01_TITLE = "n*log(n)";
+#define FUNC01_TITLE "n*log(n)"
 long double func01(long double n) {
 	return n * logl (n);
 }
 
-#define FUNC02_TITLE = "n^2";
+#define FUNC02_TITLE "n^2"
 long double func02(long double n) {
 	return n * n;
 }
 
 int main()
 {
-	printf("Welcome to Complexity Analyzer");
+	printf("Welcome to Complexity Analyzer\n");
+
+	printf("%*s%*s\n", TAB_WIDTH, FUNC01_TITLE, TAB_WIDTH, FUNC02_TITLE);
 
 
 	return EXIT_SUCCESS;
