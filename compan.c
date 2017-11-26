@@ -22,6 +22,7 @@
 #include <string.h>
 #include <math.h>
 
+#define NFUNCTIONS 2
 #define TAB_WIDTH 20
 #define NROWS 30
 #define STEP 1000
@@ -42,9 +43,15 @@ int main()
 
 	printf("%*s%*s%*s\n", TAB_WIDTH, "N", TAB_WIDTH, FUNC01_TITLE, TAB_WIDTH, FUNC02_TITLE);
 
+	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
+		printf("-");
+	}
+
+	printf("\n");
+
 	for(int i = 0; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
-		printf("%*ld%*le%*le\n", TAB_WIDTH, i * STEP, TAB_WIDTH, func1(argument), TAB_WIDTH, func2(argument));
+		printf("%*d%*Lf%*Lf\n", TAB_WIDTH, (i * STEP), TAB_WIDTH, func01(argument), TAB_WIDTH, func02(argument));
 	}
 
 
