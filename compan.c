@@ -22,7 +22,7 @@
 #include <string.h>
 #include <math.h>
 
-#define NFUNCTIONS 2
+#define NFUNCTIONS 4
 #define TAB_WIDTH 20
 #define NROWS 30
 #define STEP 1000
@@ -37,11 +37,27 @@ long double func02(long double n) {
 	return n * n;
 }
 
+#define FUNC03_TITLE "2^n"
+long double func01(long double n) {
+	return powl(2.0, n);
+}
+
+#define FUNC04_TITLE "5^(log(n))"
+long double func02(long double n) {
+	return powl(5.0, logl(n));
+}
+
+
 int main()
 {
 	printf("Welcome to Complexity Analyzer\n");
 
-	printf("%*s%*s%*s\n", TAB_WIDTH, "N", TAB_WIDTH, FUNC01_TITLE, TAB_WIDTH, FUNC02_TITLE);
+	printf("%*s%*s%*s\n", TAB_WIDTH, "N",
+		TAB_WIDTH, FUNC01_TITLE,
+		TAB_WIDTH, FUNC02_TITLE
+		TAB_WIDTH, FUNC03_TITLE,
+		TAB_WIDTH, FUNC04_TITLE
+	);
 
 	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
 		printf("-");
@@ -51,7 +67,12 @@ int main()
 
 	for(int i = 0; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
-		printf("%*d%*Lf%*Lf\n", TAB_WIDTH, (i * STEP), TAB_WIDTH, func01(argument), TAB_WIDTH, func02(argument));
+		printf("%*d%*Lf%*Lf\n", TAB_WIDTH, (i * STEP),
+			TAB_WIDTH, func01(argument),
+			TAB_WIDTH, func02(argument)
+			TAB_WIDTH, func03(argument),
+			TAB_WIDTH, func04(argument)
+		);
 	}
 
 
