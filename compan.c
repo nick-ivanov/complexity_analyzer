@@ -38,12 +38,12 @@ long double func02(long double n) {
 }
 
 #define FUNC03_TITLE "2^n"
-long double func01(long double n) {
+long double func03(long double n) {
 	return powl(2.0, n);
 }
 
 #define FUNC04_TITLE "5^(log(n))"
-long double func02(long double n) {
+long double func04(long double n) {
 	return powl(5.0, logl(n));
 }
 
