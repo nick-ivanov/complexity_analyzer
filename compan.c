@@ -52,7 +52,8 @@ int main()
 {
 	printf("Welcome to Complexity Analyzer\n");
 
-	printf("%*s%*s%*s\n", TAB_WIDTH, "N",
+	printf("%*s%*s%*s\n",
+		TAB_WIDTH, "N",
 		TAB_WIDTH, FUNC01_TITLE,
 		TAB_WIDTH, FUNC02_TITLE,
 		TAB_WIDTH, FUNC03_TITLE,
@@ -67,7 +68,8 @@ int main()
 
 	for(int i = 0; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
-		printf("%*d%*Lf%*Lf%*Lf%*Lf\n", TAB_WIDTH, (i * STEP),
+		printf("%*d%*Lf%*Lf%*Lf%*Lf\n",
+			TAB_WIDTH, (i * STEP),
 			TAB_WIDTH, func01(argument),
 			TAB_WIDTH, func02(argument),
 			TAB_WIDTH, func03(argument),
