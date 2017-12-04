@@ -52,7 +52,7 @@ int main()
 {
 	printf("Welcome to Complexity Analyzer\n");
 
-	printf("%*s%*s%*s\n",
+	printf("%*s%*s%*s%*s%*s\n",
 		TAB_WIDTH, "N",
 		TAB_WIDTH, FUNC01_TITLE,
 		TAB_WIDTH, FUNC02_TITLE,
