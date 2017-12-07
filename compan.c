@@ -25,26 +25,26 @@
 #define NFUNCTIONS 4
 #define TAB_WIDTH 20
 #define NROWS 30
-#define STEP 1000
+#define STEP 10
 
 #define FUNC01_TITLE "n*log(n)"
-long double func01(long double n) {
-	return n * logl (n);
+long func01(long double n) {
+	return (long) n * logl (n);
 }
 
 #define FUNC02_TITLE "n^2"
-long double func02(long double n) {
-	return n * n;
+long func02(long double n) {
+	return (long) n * n;
 }
 
 #define FUNC03_TITLE "2^n"
-long double func03(long double n) {
-	return powl(2.0, n);
+long func03(long double n) {
+	return (long) powl(2.0, n);
 }
 
 #define FUNC04_TITLE "5^(log(n))"
-long double func04(long double n) {
-	return powl(5.0, logl(n));
+long func04(long double n) {
+	return (long) powl(5.0, logl(n));
 }
 
 
@@ -68,7 +68,7 @@ int main()
 
 	for(int i = 0; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
-		printf("%*d%*Lf%*Lf%*Lf%*Lf\n",
+		printf("%*d%*l%*l%*l%*l\n",
 			TAB_WIDTH, (i * STEP),
 			TAB_WIDTH, func01(argument),
 			TAB_WIDTH, func02(argument),
