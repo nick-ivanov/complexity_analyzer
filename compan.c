@@ -22,10 +22,10 @@
 #include <string.h>
 #include <math.h>
 
-#define NFUNCTIONS 4
+#define NFUNCTIONS 2
 #define TAB_WIDTH 20
 #define NROWS 30
-#define STEP 10
+#define STEP 1000
 
 #define FUNC01_TITLE "n*log(n)"
 long func01(long double n) {
@@ -50,14 +50,12 @@ long func04(long double n) {
 
 int main()
 {
-	printf("Welcome to Complexity Analyzer\n");
+	printf("Welcome to Complexity Analyzer!\n");
 
 	printf("%*s%*s%*s%*s%*s\n",
 		TAB_WIDTH, "N",
 		TAB_WIDTH, FUNC01_TITLE,
-		TAB_WIDTH, FUNC02_TITLE,
-		TAB_WIDTH, FUNC03_TITLE,
-		TAB_WIDTH, FUNC04_TITLE
+		TAB_WIDTH, FUNC02_TITLE
 	);
 
 	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
@@ -68,12 +66,10 @@ int main()
 
 	for(int i = 0; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
-		printf("%*d%*l%*l%*l%*l\n",
+		printf("%*d%*ld%*ld%*ld%*ld\n",
 			TAB_WIDTH, (i * STEP),
 			TAB_WIDTH, func01(argument),
-			TAB_WIDTH, func02(argument),
-			TAB_WIDTH, func03(argument),
-			TAB_WIDTH, func04(argument)
+			TAB_WIDTH, func02(argument)
 		);
 	}
 
