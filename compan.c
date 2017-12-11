@@ -58,7 +58,7 @@ int main()
 		TAB_WIDTH, FUNC02_TITLE
 	);
 
-	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
+	for(int i = 1; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
 		printf("-");
 	}
 
