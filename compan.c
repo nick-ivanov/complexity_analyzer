@@ -62,8 +62,8 @@ int main()
 
 	printf("\n");
 
-	for(int i = 1; i < NROWS; i++) {
-		long double argument = (long double)(i * STEP);
+	for(int i = 0; i < NROWS; i++) {
+		long double argument = (long double)(i * STEP) + 1;
 		printf("%*d%*ld%*ld\n",
 			TAB_WIDTH, (i * STEP),
 			TAB_WIDTH, func01(argument),
