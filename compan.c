@@ -56,13 +56,13 @@ int main()
 		TAB_WIDTH, FUNC02_TITLE
 	);
 
-	for(int i = 1; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
+	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
 		printf("-");
 	}
 
 	printf("\n");
 
-	for(int i = 0; i < NROWS; i++) {
+	for(int i = 1; i < NROWS; i++) {
 		long double argument = (long double)(i * STEP);
 		printf("%*d%*ld%*ld\n",
 			TAB_WIDTH, (i * STEP),
