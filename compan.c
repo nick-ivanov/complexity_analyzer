@@ -48,9 +48,6 @@ long func04(long double n) {
 
 int main()
 {
-	printf("Welcome to Complexity Analyzer!\n");
-	printf("-------------------------------\n");
-
 	printf("%*s%*s%*s\n",
 		TAB_WIDTH, "N",
 		TAB_WIDTH, FUNC01_TITLE,
