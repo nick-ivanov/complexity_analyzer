@@ -23,7 +23,7 @@
 #define NFUNCTIONS 2
 #define TAB_WIDTH 20
 #define NROWS 30
-#define STEP 1000
+#define STEP 10
 
 #define FUNC01_TITLE "n*log(n)"
 long func01(long double n) {
@@ -50,8 +50,8 @@ int main()
 {
 	printf("%*s%*s%*s\n",
 		TAB_WIDTH, "N",
-		TAB_WIDTH, FUNC01_TITLE,
-		TAB_WIDTH, FUNC02_TITLE
+		TAB_WIDTH, FUNC03_TITLE,
+		TAB_WIDTH, FUNC04_TITLE
 	);
 
 	for(int i = 0; i < TAB_WIDTH * (NFUNCTIONS + 1); i++) {
@@ -64,8 +64,8 @@ int main()
 		long double argument = (i == 0) ? 1.0 : (long double)(i * STEP);
 		printf("%*d%*ld%*ld\n",
 			TAB_WIDTH, (int) argument,
-			TAB_WIDTH, func01(argument),
-			TAB_WIDTH, func02(argument)
+			TAB_WIDTH, func03(argument),
+			TAB_WIDTH, func04(argument)
 		);
 	}
 
