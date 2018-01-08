@@ -23,7 +23,7 @@
 #define NFUNCTIONS 2
 #define TAB_WIDTH 20
 #define NROWS 30
-#define STEP 10
+#define STEP 1
 
 #define FUNC01_TITLE "n*log(n)"
 long func01(long double n) {
